@@ -2,13 +2,13 @@
 
 This project is a **front-end practice website** created to experiment with **CSS Flexbox** and **responsive design using media queries**.
 
-⚠️ **Important:**  
+ **Important:**  
 The Tennis Leisure Centre shown in this project is **not a real organisation**.  
 This website exists purely for learning and layout experimentation.
 
 ---
 
-## 🎯 Project Goals
+##  Project Goals
 
 - Practice **CSS Flexbox layouts**
 - Explore **media queries** at different screen sizes
@@ -20,7 +20,7 @@ This website exists purely for learning and layout experimentation.
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -29,7 +29,7 @@ This website exists purely for learning and layout experimentation.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 Local tennis club/
 ├── indexlocal.html
@@ -45,7 +45,7 @@ Local tennis club/
 
 ---
 
-## 📱 Responsive Features
+## Responsive Features
 
 - Desktop layout using Flexbox
 - Tablet breakpoint at **850px**
@@ -54,7 +54,7 @@ Local tennis club/
 
 ---
 
-## ▶️ How to View the Project
+## How to View the Project
 
 1. Download or clone the repository
 2. Open `indexlocal.html` in a web browser
@@ -63,7 +63,7 @@ No build tools or frameworks are required.
 
 ---
 
-## ✨ Notes
+## Notes
 
 This project was built as part of learning **responsive CSS layouts** and is intended as a layout experiment rather than a production website.
 
