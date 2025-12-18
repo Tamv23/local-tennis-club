@@ -1,0 +1,302 @@
+/*general styling */
+html {
+    margin: 0px;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: black;
+}
+
+/*styleing for h1,h2,h3 elements */
+h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(240, 230, 140);
+    text-align: center;
+    padding: 20px 0;
+    align-items: center;
+
+}
+h2 {
+    font-size: 1.5rem;
+    display: block;
+    margin-left: 0;  
+    color: rgb(35, 17, 82);
+    padding: 0.5em 0.5em 0.5em 2em;
+
+}
+.listitem {
+    font-size: 1.2rem;
+}
+
+/* Very top banner section*/
+
+#topbanner{
+    height: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0;
+    /*margin-bottom: 0.5rem;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    width: 8rem;
+    height: auto;
+    margin-left: 0;
+    
+}
+   
+
+/* below navigation bar */
+
+#navigationBar {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+#navigationBar .navlist{
+    display: flex;
+    list-style-type:none;
+    padding:0px;
+
+}
+.listitem {
+    padding:1rem 1rem;
+}
+.itemlink {
+    text-decoration: none;
+   /* padding: 10px 10px;*/
+    color: black;
+}
+.navlist .itemlink:hover {
+     color: rgb(240, 230, 140);
+}
+.navlist .itemlink:active {
+    color: rgb(222, 27, 125);
+}
+/* section 1 - Banner image background and Quote*/
+#homebanner {
+    height:500px;
+    width:100%;
+    background-image: url("../images/quotebackgroundimage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+#homebanner #quoteBar{ /* 800px bp need it to increase hight to fit content*/
+    width: 100%;
+    height: auto;
+    background-color: white;
+    opacity: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 2;
+}
+
+#homebanner #quoteBar p {
+    font-weight: bold;
+}
+
+/* section 2 - Our Gallery */
+#tennisgallery {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  
+}
+
+#tennisgallery .galleryimages {
+  flex: 1 1 20rem;     /* grow=1, shrink=1, base width=20rem */
+  margin: 1rem;        /* gutter around each image */
+  height: auto;        /* let object-fit govern height when cropping */
+  object-fit: cover;   /* crop to fill the flex box without distortion */
+  width: 20rem;        /* establishes the “box” size */
+}
+
+/* section 3 - communitymemberships */
+ 
+#communityclubs {
+    display: flex;
+    justify-content: space-around ;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;           /* align boxes at top so captions sit under images consistently */
+    gap: 1rem;                         /* consistent spacing between boxes (use gap instead of margins) */
+    width: 100%;
+    box-sizing: border-box;            /* ensure padding/gap counted in width */
+
+}
+
+/* Below each card that contains an image + caption */
+.boxcontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 20rem;     /* <-- ADDED: allow each box to grow and shrink (grow=1, shrink=1, basis=20rem) */
+
+    min-width: 12rem;    /* <-- ADDED: prevent boxes from getting too narrow */
+    max-width: 30rem;    /* <-- ADDED: optional cap so one box doesn't become huge on wide screens */
+    box-sizing: border-box;   /* make padding/gap included in sizing */
+    overflow: hidden;    /* protects cropping if we choose object-fit / fixed height later */
+    padding: 0.25rem;    /* small internal padding so caption doesn't touch edges */
+
+}
+
+/* responsive image behavior (no distortion) */
+.clubimages {
+    width: 100%;  /* <-- CHANGED: make the image fill the width of its box container */
+    height: auto;   /* maintain natural aspect ratio (no distortion) */
+
+    flex: 1 1 20rem; /* grow=1, shrink=1, base width=20rem */
+    display: block;          /* remove inline spacing artifacts */
+    object-fit: cover;       /* safe to keep: if you set a fixed height later it will crop nicely */
+
+}
+
+#communityclubsinfo {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* caption styling */
+.clubcaption {
+    justify-items: center;
+    align-items: center;
+    padding-top: 1em;
+}
+
+/* media query for max-width: 570px MOBILE: stack community boxes as single-column 
+@media only screen and (max-width: 570px) {
+  .boxcontainer {
+    flex: 1 1 100%;                    /* make each box take full width on small screens 
+    max-width: none;                   /* remove max-width cap on small screens 
+  }
+}*/
+
+
+/* section 4 - Footer and contact section*/ 
+#contact {
+    padding: 1rem 2rem;
+    background-color: rgb(35, 17, 82);
+    color: rgb(240, 230, 140);
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+}
+#contact #contacttitle {
+    font-size: 1.5rem;
+}
+
+/*
+@media only screen and (max-width:1050px) {
+    #tennisgallery .galleryimages {
+    height: 16rem;
+    width: auto;
+    padding: 0.7rem 1rem;
+}
+}*/
+
+/* Below media query for TABLET screens max-width: 850px */
+@media only screen and (max-width: 850px){
+    #telephonenumber {
+        display: none;
+    }
+    #logo {
+    width: 6rem;
+    height: auto;
+    margin-left: 0;
+    }
+
+    .center-title-container {
+        position: absolute; /*position: absolute makes .center-title-container float over the full width of #topbanner*/
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        pointer-events: none; /* optional: makes it not interfere with clicks */
+    }
+       #title {
+       font-size: 1.5rem;
+       padding: 0;
+       margin:0;
+    }
+    .listitem {
+        font-size: 1rem;
+    }
+
+    /* Inside this media query - Below for section 1  Quotebar */
+     #quoteBar {
+        padding: 1rem; /*ensures text doesn’t touch the edge.*/
+        flex-grow: 1; /*allows it to expand if there's space.*/
+        flex-shrink: 1; /*allows it to shrink on small screens.*/
+       
+    }
+
+    #quoteBar h2,
+    #quoteBar p {
+        margin: 0.5rem 0;
+        line-height: 1.2; /* tighter line height */
+        text-align: center; /*keeps layout tidy on small screens.*/
+    }
+     #tennisgallery img.galleryimages:nth-of-type(1),
+     #tennisgallery img.galleryimages:nth-of-type(4) {
+    display: none;
+  }
+
+}
+
+
+
+/* Below media query smaller screens - max-width: 570px */
+@media only screen and (max-width: 570px) {
+    .navlist {
+        display: flex;
+        flex-direction: column;
+    }
+    .listitem {
+    padding:0.4rem 0.4rem;
+}
+
+    #topbanner {
+    display: flex;                /* still flex */
+    flex-direction: column;       /* stack children */
+    align-items: center;          /* center each item */
+    padding: 0.5rem;
+    height: auto;                 /* let it grow */
+  }
+
+    #logo {
+    width: 4.5rem;
+    height: auto;
+    margin-left: 0.25  0;
+    }
+
+    .center-title-container {
+    /* drop the absolute positioning at this size: */
+    position: static;
+    width: 100%;
+    padding: 0;
+    margin: 0.25rem 0;
+    display: flex;
+    justify-content: center;
+    
+  }
+    #title {
+    font-size: 1.3rem;            /* shrink font slightly */
+    line-height: 1.2;             /* tighter lines if 2 lines */
+    margin: 0;
+  }
+}
